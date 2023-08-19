@@ -17,6 +17,7 @@ class SearchNote(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
+    # Busca una nota en especifico y valida que el titulo sea igual al texto que se ingresó en la barra de buscar.
     def test_search(self):
         # Interacciones con elementos en la aplicación móvil
         search = self.driver.find_element(MobileBy.ACCESSIBILITY_ID, "Search")

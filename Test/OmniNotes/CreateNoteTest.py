@@ -16,6 +16,7 @@ class CreateNoteTest(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
+    # Crea una nota, y verifica que el texto creado sea igual al texto que se espera.
     def test1(self):
         # Cambiamos `driver.find_element` a `self.driver.find_element`
         el3 = self.driver.find_element(MobileBy.ID, "it.feio.android.omninotes:id/fab_expand_menu_button")
@@ -25,10 +26,10 @@ class CreateNoteTest(unittest.TestCase):
         el4.click()
 
         el5 = self.driver.find_element(MobileBy.ID, "it.feio.android.omninotes:id/detail_title")
-        el5.send_keys("Dia 18")
+        el5.send_keys("Hola esto es una prueba")
 
         el6 = self.driver.find_element(MobileBy.ID, "it.feio.android.omninotes:id/detail_content")
-        el6.send_keys("Hola 18")
+        el6.send_keys("Hola mundo")
 
         el7 = self.driver.find_element(MobileBy.ACCESSIBILITY_ID, "drawer open")
         el7.click()

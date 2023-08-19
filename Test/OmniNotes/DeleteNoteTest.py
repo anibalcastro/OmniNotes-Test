@@ -17,6 +17,7 @@ class DeleteNoteTest(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
+    # Elimina la nota y valida que se haya eliminado correctamente y no exista ninguna otra nota con ese nombre
     def test2(self):
         el1 = self.driver.find_element(MobileBy.ACCESSIBILITY_ID, "Search")
         el1.click()
