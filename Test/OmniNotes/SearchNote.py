@@ -2,6 +2,7 @@ import unittest
 from appium import webdriver
 from appium.webdriver.common.mobileby import MobileBy
 from appium.webdriver.common.touch_action import TouchAction
+import time
 
 class SearchNote(unittest.TestCase):
     def setUp(self):
@@ -30,6 +31,8 @@ class SearchNote(unittest.TestCase):
         # Boton de buscar en el teclado
         button = TouchAction(self.driver)
         button.tap(x=1319, y=2832).perform()
+        
+        time.sleep(2)
 
         # Encontrar y hacer clic en el botón de apertura del menú lateral
         button = TouchAction(self.driver)
