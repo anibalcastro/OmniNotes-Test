@@ -41,7 +41,7 @@ class CreateNoteTest(unittest.TestCase):
         elemento = self.driver.find_element(MobileBy.ID, "it.feio.android.omninotes:id/detail_title")
 
         texto_actual = elemento.text
-        texto_esperado = "Hola mundo"  # Cambiamos el valor esperado a "Hola mundo"
+        texto_esperado = "Hola esto es una prueba" 
 
         self.assertEqual(texto_actual, texto_esperado, f"El texto actual no coincide con el texto esperado: {texto_actual}")
 
